@@ -1,0 +1,65 @@
+* {
+  background-color: pink
+}
+
+.container {
+  font-family: 'Courier New', sans-serif;
+  width: 300px;
+  margin: 30px auto 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+#target, #result {
+  font-size: 32px;
+  margin-bottom: 15px;
+  background: #ccc;
+  border-radius: 5%;
+  height: 60px;
+  line-height: 60px;  /* 文字が上下中央に揃う */
+}
+
+#result.perfect {
+  background: tomato;
+  color: #fff
+}
+
+#start {
+  float: left;
+}
+
+#stop {
+  float: right;
+}
+
+#start, #stop {
+  cursor: pointer;
+  font-size: 18px;
+  width: 145px;
+  background: #eee;
+  height: 40px;
+  line-height: 40px;
+  box-shadow: 0 6px 0 #ccc;
+}
+
+#start.pushed, #stop.pushed {
+  margin-top: 3px;
+  box-shadow: 0 3px 0 #ccc;
+}
+
+#disc {
+  text-align: left;
+  padding: 20px;
+  margin-top: 70px;
+  font-family: monospace;
+  color: turquoise;
+  background-color: white;
+  border-radius: 20%
+}
+
+h1 {
+  text-align: Center;
+  font-family: Courier New, Courier, monospace;
+  font-size: 30px;
+  color: teal;
+}
