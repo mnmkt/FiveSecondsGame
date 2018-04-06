@@ -4,17 +4,30 @@
   let start = document.getElementById('start');
   let stop = document.getElementById('stop');
   let result = document.getElementById('result');
-  let startTime = 0;
+  let startTime;
+  let isStarted = false;
 
   start.addEventListener('click', function(){
+    if(isStarted === true) {
+      return;
+      //return to prevent following 4 lines.
+    }
+
+    isStarted = true;
     startTime = Date.now();
     this.className = 'pushed';
     stop.className = '';
   })
 
   stop.addEventListener('click', function(){
-    let elapsedTime = 0;
-    let diff = 0;
+    let elapsedTime;
+    let diff;
+
+    if(isStarted === false) {
+      return;
+    }
+
+    isStarted = false;
     elapsedTime = (Date.now() - startTime) / 1000;
 
     result.textContent = elapsedTime.toFixed(3);
